@@ -1,10 +1,12 @@
 {
   "name": "status-stats",
   "main": "./lib/status-stats",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": false,
   "description": "A derivative of @segphault's status-wordcount. Displays wordcount, grade level, and Flesh Kincaid scores, to help you write for your audience.",
-  "activationEvents": ["status-stats:toggle"],
+  "activationEvents": [
+    "status-stats:toggle"
+  ],
   "repository": "https://github.com/cjoh/status-stats",
   "license": "MIT",
   "engines": {
