@@ -5,7 +5,7 @@
   "private": false,
   "description": "A derivative of @segphault's status-wordcount. Displays wordcount, grade level, and Flesh Kincaid scores, to help you write for your audience.",
   "activationEvents": ["status-stats:toggle"],
-  "repository": "https://github.com/cjoh/status-stats"
+  "repository": "https://github.com/cjoh/status-stats",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
