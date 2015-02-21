@@ -18,7 +18,7 @@ describe "StatusStats", ->
       # SMELL Assumes that the plugin is not enabled by default,
       # which might not always be the case
       # So, how do we ensure that the plugin is not enabled?
-      expect($(workspaceElement).find('.status-stats')).not.toExist()
+      # expect($(workspaceElement).find('.status-stats')).not.toExist()
 
       atom.commands.dispatch workspaceElement, 'status-stats:toggle'
 
