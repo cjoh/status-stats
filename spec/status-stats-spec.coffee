@@ -14,6 +14,9 @@ describe "StatusStats", ->
 
   describe "when the status-stats:toggle event is triggered", ->
     it "attaches and then detaches the view", ->
+      # SMELL Assumes that the plugin is not enabled by default,
+      # which might not always be the case
+      # So, how do we ensure that the plugin is not enabled?
       expect(atom.workspaceView.find('.status-stats')).not.toExist()
 
       # This is an activation event, triggering it will cause the package to be
