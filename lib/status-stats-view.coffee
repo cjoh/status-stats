@@ -6,7 +6,7 @@ class StatusStatsView extends View
     @div class: "status-stats inline-block"
 
   initialize: (serializeState) ->
-    atom.workspaceView.command "status-stats:toggle", => @toggle()
+    atom.commands.add "atom-workspace", "status-stats:toggle", => @toggle()
 
   updateWordCount: =>
     editor = atom.workspaceView.getActivePaneItem()
