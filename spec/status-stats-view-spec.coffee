@@ -1,5 +1,5 @@
 StatusStatsView = require '../lib/status-stats-view'
 
 describe "StatusStatsView", ->
-  it "has no tests yet", ->
+  it "does nothing yet", ->
     expect(true).toBe(true)
