@@ -4,10 +4,7 @@
   "version": "0.1.0",
   "private": false,
   "description": "A derivative of @segphault's status-wordcount. Displays wordcount, grade level, and Flesh Kincaid scores, to help you write for your audience.",
-  "activationEvents": [
-    "status-stats:toggle"
-  ],
-  "repository": "https://github.com/cjoh/status-stats",
+  "repository": "https://github.com/jbrains/status-stats",
   "license": "MIT",
   "engines": {
     "atom": ">0.182.0"
@@ -15,12 +12,5 @@
   "dependencies": {
     "atom-space-pen-views": "^2.0.3",
     "text-statistics": "0.1.1"
-  },
-  "consumedServices": {
-    "statusBar": {
-      "versions": {
-        "^0.60.0": "consumeStatusBar"
-      }
-    }
   }
 }
