@@ -1,6 +1,6 @@
 module.exports =
   activate: (state) ->
-    return
+    console.log("activating plugin with state #{state}")
 
   deactivate: ->
-    return
+    console.log("deactivating plugin")
