@@ -2,18 +2,17 @@
 {CompositeDisposable} = require 'atom'
 
 module.exports =
-class StatusStatsView extends View
+class DocumentStatsView extends View
   @content: ->
     @div class: "status-stats inline-block"
 
-  initialize: ->
-    return
+  initialize: (serializeState) ->
+    # do nothing so far
 
-  serialize: ->
-    return
+  toggle: ->
+    @show()
 
-  destroy: ->
-    return
+  show: ->
+    # implemented by a lower layer, I guess
 
-  attach: ->
-    return
+
