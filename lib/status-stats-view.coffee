@@ -7,7 +7,7 @@ class DocumentStatsView extends View
     @span class: "status-stats inline-block"
 
   initialize: (serializeState) ->
-    # @show()
+    # nothing to do
 
   toggle: ->
     if not @visible
