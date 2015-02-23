@@ -19,10 +19,14 @@ class DocumentStatsView extends View
 
   show: ->
     # implemented by lower layer
+    @updateStats()
     super()
     
   hide: ->
     # implemented by lower layer
     super()
+
+  updateStats: ->
+    # update stats from whatever you're listening to
 
 

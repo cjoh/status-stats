@@ -34,3 +34,11 @@ describe "Document stats view", ->
       expect(view.show).not.toHaveBeenCalled()
       expect(view.hide).toHaveBeenCalled()
 
+  describe "showing the view", ->
+    it "updates the stats", ->
+      view = new DocumentStatsView()
+      spyOn(view, "updateStats")
+
+      view.show()
+      expect(view.updateStats).toHaveBeenCalled()
+
