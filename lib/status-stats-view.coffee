@@ -7,24 +7,14 @@ class DocumentStatsView extends View
     @span class: "status-stats inline-block"
 
   initialize: (serializeState) ->
-    # nothing to do
+    # jQuery's way to say "show"
+    # http://api.jquery.com/toggle/
+    @toggle(true) 
 
-  toggle: ->
-    if not @visible
-      @show()
-      @visible = true
-    else
-      @hide()
-      @visible = false
-
-  show: ->
-    # implemented by lower layer
+  # We need `args...` because we're overriding a jQuery function
+  toggle: (args...) ->
     @updateStats()
-    super()
-    
-  hide: ->
-    # implemented by lower layer
-    super()
+    super(args)
 
   updateStats: ->
     # update stats from whatever you're listening to
