@@ -6,7 +6,7 @@ class DocumentStatsView extends View
   @content: ->
     @span class: "status-stats inline-block"
 
-  initialize: (serializeState) ->
+  initialize: (_) ->
     # jQuery's way to say "show"
     # http://api.jquery.com/toggle/
     @toggle(true) 
