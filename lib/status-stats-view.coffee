@@ -7,12 +7,22 @@ class DocumentStatsView extends View
     @div class: "status-stats inline-block"
 
   initialize: (serializeState) ->
-    # do nothing so far
+    @visible = true 
 
   toggle: ->
-    @show()
+    if not @visible
+      @show()
+      @visible = true
+    else
+      @hide()
+      @visible = false
 
   show: ->
-    # implemented by a lower layer, I guess
+    # implemented by lower layer
+    super()
+    
+  hide: ->
+    # implemented by lower layer
+    super()
 
 
