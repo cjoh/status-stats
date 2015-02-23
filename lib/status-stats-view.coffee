@@ -28,5 +28,4 @@ class DocumentStatsView extends View
 
   updateStats: ->
     # update stats from whatever you're listening to
-
-
+    @text("THESE STATS MEAN NOTHING!")
