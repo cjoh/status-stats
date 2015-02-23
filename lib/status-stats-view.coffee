@@ -4,10 +4,10 @@
 module.exports =
 class DocumentStatsView extends View
   @content: ->
-    @div class: "status-stats inline-block"
+    @span class: "status-stats inline-block"
 
   initialize: (serializeState) ->
-    @visible = true 
+    # @show()
 
   toggle: ->
     if not @visible
