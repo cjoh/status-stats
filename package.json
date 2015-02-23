@@ -9,6 +9,13 @@
   "engines": {
     "atom": ">0.182.0"
   },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^0.58.0": "consumeStatusBar"
+      }
+    }
+  },
   "dependencies": {
     "atom-space-pen-views": "^2.0.3",
     "text-statistics": "0.1.1"
