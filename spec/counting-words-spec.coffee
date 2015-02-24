@@ -1,5 +1,6 @@
 require("words.js")
 
+# countWords :: text -> number
 theContractForCountingWords = (countWords) ->
   describe "The contract for Counting Words", ->
     describe "counting words accurately for valid input", ->
