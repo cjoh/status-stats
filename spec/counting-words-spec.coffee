@@ -45,9 +45,8 @@ theContractForCountingWords = (countWords) ->
       @checks(name, inputValue) for name, inputValue of @specialCases
 
 require("words.js")
-class CountWordsWithWordsJs
-  countWords: (text) ->
-    new Words(text).count
+countWordsWithWordsJs = (text) ->
+  new Words(text).count
 
 describe "Counting Words with Words.js", ->
-  theContractForCountingWords(new CountWordsWithWordsJs().countWords)
+  theContractForCountingWords(countWordsWithWordsJs)
