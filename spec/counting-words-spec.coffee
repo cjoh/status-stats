@@ -1,5 +1,3 @@
-require("words.js")
-
 # countWords :: text -> number
 theContractForCountingWords = (countWords) ->
   describe "The contract for Counting Words", ->
@@ -46,6 +44,7 @@ theContractForCountingWords = (countWords) ->
           
       @checks(name, inputValue) for name, inputValue of @specialCases
 
+require("words.js")
 class CountWordsWithWordsJs
   countWords: (text) ->
     new Words(text).count
