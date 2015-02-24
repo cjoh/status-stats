@@ -23,6 +23,16 @@ describe "The Words API", ->
 
   it "gracefully handles an argument other than a string", ->
     expect(new Words({a: 1, b: 2, c: 3}).count).toBe(0)
-    # WTF? Are strings and arrays of characters related in Javascript?
-    expect(new Words([1, 2, 3, 4]).count).toBe(0)
+
+  it "strangely handles an array of numbers", ->
+    # since this...
+    expect([1, 2, 3, 4] + '').toBe("1,2,3,4")
+    # therefore that:
+    expect(new Words([1, 2, 3, 4]).count).toBe(4)
+
+  it "strangely handles numbers", ->
+    # since this...
+    expect(14723 + '').toBe("14723")
+    # therefore that:
+    expect(new Words(14723).count).toBe(1)
 
