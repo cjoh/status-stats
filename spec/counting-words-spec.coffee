@@ -26,7 +26,7 @@ theContractForCountingWords = (countWords) ->
         expect(countWords("\t\n\r \t\n \n\n\r")).toBe(0)
 
     describe "error paths, where it must not blow up", ->
-      specialCases = 
+      @specialCases = 
         "null": null
         "NaN": NaN
         "an empty object": {}
@@ -34,13 +34,16 @@ theContractForCountingWords = (countWords) ->
         "a non-empty object": {a: 1, b: 2, c: "hello" }
         "a non-empty array": [1, 2, 3, "hello"]
 
-      (it "does not throw an error when its input is #{name}", ->
-        expect( ->
-          countWords(inputValue)
-        ).not.toThrow()) for name, inputValue of specialCases
+      @checks = (name, inputValue) ->
+        it "does not throw an error when its input is #{name}", ->
+          expect( ->
+            countWords(inputValue)
+          ).not.toThrow() 
 
-      (it "returns a number when its input is #{name}", ->
-        expect(typeof countWords(inputValue)).toBe("number")) for name, inputValue of specialCases
+        it "returns a number when its input is #{name}", ->
+          expect(typeof countWords(inputValue)).toBe("number")
+          
+      @checks(name, inputValue) for name, inputValue of @specialCases
 
 class CountWordsWithWordsJs
   countWords: (text) ->
