@@ -1,7 +1,7 @@
 TextStatistics = require("text-statistics")
 
 describe "The textStatistics API", ->
-  describe "happy path example", ->
+  describe "counting words, which it doesn't do well", ->
     it "sure as hell doesn't count words", ->
       textStatistics = new TextStatistics("What the fuck")
       expect(textStatistics.text).toBe("What the fuck.") # Works for me...
