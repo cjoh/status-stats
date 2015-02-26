@@ -37,6 +37,8 @@ theContractForComputingFleschKincaidMeasure = (fleschKincaidMeasure) ->
           
       @checks(name, inputValue) for name, inputValue of @specialCases
 
+module.exports = 
+  theContractForComputingFleschKincaidMeasure: theContractForComputingFleschKincaidMeasure
 
 TextStatistics = require("text-statistics")
 gradeLevelWithTextStatistics = (text) ->
