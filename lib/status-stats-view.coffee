@@ -4,14 +4,17 @@ DocumentStatsModel = require("./status-stats-model")
 
 module.exports =
 class DocumentStatsView extends View
-  @model = null
   @content: ->
     @span class: "status-stats inline-block"
 
   initialize: (_) ->
+    # SMELL Programming by coincidence.
+    # We must initialise the model before showing stats
+    # with @toggle(true)
+    @model = new DocumentStatsModel()
+
     # jQuery's way to say "show"
     # http://api.jquery.com/toggle/
-    @model = new DocumentStatsModel()
     @toggle(true) 
 
   # We need `args...` because we're overriding a jQuery function
