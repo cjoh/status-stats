@@ -1,3 +1,8 @@
+# This contract works exactly the same for both Flesch-Kincaid
+# measures, meaning grade level and reading ease, since we're
+# not checking the calculation of the score, but rather only
+# that the measure functions handle various inputs gracefully.
+
 # fleschKincaidMeasure :: text -> number
 theContractForComputingFleschKincaidMeasure = (fleschKincaidMeasure) ->
   describe "The contract for computing a Flesch-Kincaid measure", ->
@@ -39,23 +44,3 @@ theContractForComputingFleschKincaidMeasure = (fleschKincaidMeasure) ->
 
 module.exports = 
   theContractForComputingFleschKincaidMeasure: theContractForComputingFleschKincaidMeasure
-
-TextStatistics = require("text-statistics")
-gradeLevelWithTextStatistics = (text) ->
-  try
-    new TextStatistics(text).fleschKincaidGradeLevel()
-  catch
-    0.0
-
-readingEaseWithTextStatistics = (text) ->
-  try
-    new TextStatistics(text).fleschKincaidReadingEase()
-  catch
-    0.0
-
-describe "Computing Flesch-Kincaid grade level with text-statistics", ->
-  theContractForComputingFleschKincaidMeasure(gradeLevelWithTextStatistics)
-
-describe "Computing Flesch-Kincaid reading ease with text-statistics", ->
-  theContractForComputingFleschKincaidMeasure(readingEaseWithTextStatistics)
-

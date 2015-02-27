@@ -47,10 +47,3 @@ theContractForCountingWords = (countWords) ->
 module.exports = 
   theContractForCountingWords: theContractForCountingWords
 
-require("words.js")
-countWordsWithWordsJs = (text) ->
-  new Words(text).count
-
-describe "Counting Words with Words.js", ->
-  theContractForCountingWords(countWordsWithWordsJs)
-
