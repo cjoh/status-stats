@@ -18,6 +18,9 @@ class DocumentStatsView extends View
       @updateStats())
 
     # When the active buffer changes, updateStats
+    atom.workspace.observeTextEditors((editor) =>
+      editor.onDidChange(() =>
+        @updateStats()))
 
     # jQuery's way to say "show"
     # http://api.jquery.com/toggle/
