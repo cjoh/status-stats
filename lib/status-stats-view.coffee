@@ -13,6 +13,12 @@ class DocumentStatsView extends View
     # with @toggle(true)
     @model = new DocumentStatsModel()
 
+    # When switching panes, updateStats
+    atom.workspace.onDidChangeActivePaneItem((activePaneItem) =>
+      @updateStats())
+
+    # When the active buffer changes, updateStats
+
     # jQuery's way to say "show"
     # http://api.jquery.com/toggle/
     @toggle(true) 
