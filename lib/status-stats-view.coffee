@@ -34,9 +34,10 @@ class DocumentStatsView extends View
   updateStats: ->
     # The active pane might not be an editor.
     editor = atom.workspace.getActiveTextEditor()
-    if not editor?
-      return
+    if editor?
+      activeDocumentText = editor.getText()
+      analysis = @model.analyseText(activeDocumentText)
+      @text("#{analysis.wordCount} words; grade level #{analysis.gradeLevel}; reading ease #{analysis.readingEase}")
+    else
+      @text("No text to analyse.")
 
-    activeDocumentText = editor.getText()
-    analysis = @model.analyseText(activeDocumentText)
-    @text("#{analysis.wordCount} words; grade level #{analysis.gradeLevel}; reading ease #{analysis.readingEase}")
