@@ -1,4 +1,5 @@
 DocumentStatsView = require("./status-stats-view")
+DocumentStatsModel = require("./status-stats-model")
 
 module.exports =
   activate: (state) ->
