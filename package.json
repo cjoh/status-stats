@@ -1,10 +1,10 @@
 {
   "name": "status-stats",
   "main": "./lib/status-stats",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
-  "description": "A derivative of @segphault's status-wordcount. Displays wordcount, grade level, and Flesh Kincaid scores, to help you write for your audience.",
-  "repository": "https://github.com/jbrains/status-stats",
+  "description": "A derivative of @segphault's status-wordcount. Displays word count as well as Flesch-Kincaid scores for grade level and reading ease, in order to help you write for your audience.",
+  "repository": "https://github.com/cjoh/status-stats",
   "license": "MIT",
   "engines": {
     "atom": ">0.182.0"
@@ -19,6 +19,6 @@
   "dependencies": {
     "atom-space-pen-views": "^2.0.3",
     "text-statistics": "rabidaudio/TextStatistics.js",
-    "words.js": "0.3.9"
+    "words.js": "^0.3.9"
   }
 }
