@@ -1,7 +1,7 @@
 DocumentStatsModel = require("../lib/status-stats-model")
 
 describe "Document Stats Model", ->
-  describe "happy paths", ->
+  describe "smoke tests", ->
     beforeEach ->
       @model = new DocumentStatsModel()
 
