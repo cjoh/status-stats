@@ -1,12 +1,12 @@
 TextStatistics = require("text-statistics")
 
-gradeLevel = (text) ->
-  new TextStatistics(text).fleschKincaidGradeLevel()
-
-readingEase = (text) ->
-  new TextStatistics(text).fleschKincaidReadingEase()
-
 describe "The textStatistics API", ->
+  gradeLevel = (text) ->
+    new TextStatistics(text).fleschKincaidGradeLevel()
+
+  readingEase = (text) ->
+    new TextStatistics(text).fleschKincaidReadingEase()
+
   describe "Flesch-Kincaid measurements", ->
     describe "the happy path", ->
       it "computes grade level", ->
@@ -69,4 +69,3 @@ When I started practising test-first programming (and later test-driven developm
       expect( ->
         new TextStatistics(" ").wordCount()
       ).not.toThrow()
-
