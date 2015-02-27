@@ -28,8 +28,8 @@ class DocumentStatsView extends View
 
   # We need `args...` because we're overriding a jQuery function
   toggle: (args...) ->
-    @updateStats()
     super(args)
+    @updateStats()
 
   updateStats: ->
     # The active pane might not be an editor.
