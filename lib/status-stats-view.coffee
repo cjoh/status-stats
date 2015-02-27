@@ -23,6 +23,6 @@ class DocumentStatsView extends View
     super(args)
 
   updateStats: ->
-    # update stats from whatever you're listening to
-    analysis = @model.analyseText("Hello there!")
+    activeDocumentText = atom.workspace.getActiveTextEditor().getText()
+    analysis = @model.analyseText(activeDocumentText)
     @text("#{analysis.wordCount} words; grade level #{analysis.gradeLevel}; reading ease #{analysis.readingEase}")
