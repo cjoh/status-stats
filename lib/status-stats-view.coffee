@@ -1,5 +1,6 @@
 {View} = require 'atom-space-pen-views'
 {CompositeDisposable} = require 'atom'
+DocumentStatsModel = require("./status-stats-model")
 
 module.exports =
 class DocumentStatsView extends View
@@ -10,6 +11,7 @@ class DocumentStatsView extends View
     # jQuery's way to say "show"
     # http://api.jquery.com/toggle/
     @toggle(true) 
+    @model = new DocumentStatsModel()
 
   # We need `args...` because we're overriding a jQuery function
   toggle: (args...) ->
@@ -18,4 +20,8 @@ class DocumentStatsView extends View
 
   updateStats: ->
     # update stats from whatever you're listening to
-    @text("THESE STATS MEAN NOTHING!")
+    analysis =
+      words: 100
+      gradeLevel: 5.4
+      readingEase: 99.2
+    @text("#{analysis.words} words; grade level #{analysis.gradeLevel}; reading ease #{analysis.readingEase}")
