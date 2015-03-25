@@ -1,7 +1,7 @@
 {
   "name": "status-stats-jbrains",
   "main": "./lib/status-stats",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": false,
   "description": "A derivative of @segphault's status-wordcount. Displays word count as well as Flesch-Kincaid scores for grade level and reading ease, in order to help you write for your audience.",
   "repository": "https://github.com/jbrains/status-stats",
