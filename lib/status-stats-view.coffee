@@ -8,6 +8,8 @@ class DocumentStatsView extends View
     @span class: "status-stats inline-block"
 
   initialize: (_) ->
+    console.log("initialize")
+
     # SMELL Programming by coincidence.
     # We must initialise the model before showing stats
     # with @toggle(true)
@@ -22,12 +24,16 @@ class DocumentStatsView extends View
       editor.onDidChange(() =>
         @updateStats()))
 
-    # jQuery's way to say "show"
-    # http://api.jquery.com/toggle/
-    @toggle(true) 
+    @ensureFirstToggleAfterActivationShowsStats()
+
+  ensureFirstToggleAfterActivationShowsStats: ->
+    # force hiding so that toggle() will show
+    @hide()
 
   # We need `args...` because we're overriding a jQuery function
   toggle: (args...) ->
+    console.log("toggle: " + args)
+
     super(args)
     @updateStats()
 
@@ -40,4 +46,3 @@ class DocumentStatsView extends View
       @text("#{analysis.wordCount} words; grade level #{analysis.gradeLevel}; reading ease #{analysis.readingEase}")
     else
       @text("No text to analyse.")
-
