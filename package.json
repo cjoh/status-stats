@@ -4,6 +4,9 @@
   "version": "0.3.0",
   "private": false,
   "description": "A derivative of @segphault's status-wordcount. Displays word count as well as Flesch-Kincaid scores for grade level and reading ease, in order to help you write for your audience.",
+  "activationCommands": {
+    "atom-workspace": "status-stats:toggle"
+  },
   "repository": "https://github.com/jbrains/status-stats",
   "license": "MIT",
   "engines": {
