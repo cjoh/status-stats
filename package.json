@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "atom-space-pen-views": "^2.0.3",
-    "text-statistics": "rabidaudio/TextStatistics.js",
+    "text-statistics": "^0.1.1",
     "words.js": "^0.3.9"
   }
 }
