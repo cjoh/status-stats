@@ -8,8 +8,6 @@ class DocumentStatsView extends View
     @span class: "status-stats inline-block"
 
   initialize: (_) ->
-    console.log("initialize")
-
     # SMELL Programming by coincidence.
     # We must initialise the model before showing stats
     # with @toggle(true)
@@ -32,8 +30,6 @@ class DocumentStatsView extends View
 
   # We need `args...` because we're overriding a jQuery function
   toggle: (args...) ->
-    console.log("toggle: " + args)
-
     super(args)
     @updateStats()
 
