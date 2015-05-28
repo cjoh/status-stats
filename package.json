@@ -10,7 +10,7 @@
   "repository": "https://github.com/jbrains/status-stats",
   "license": "MIT",
   "engines": {
-    "atom": ">0.182.0"
+    "atom": ">=0.182.0 <2.0.0"
   },
   "consumedServices": {
     "status-bar": {
