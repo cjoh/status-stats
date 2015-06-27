@@ -1,7 +1,8 @@
 # See https://atom.io/docs/latest/creating-a-package#menus for more details
 'context-menu':
-  '.overlayer':
-      'Enable status-stats': 'status-stats:toggle'
+  '.overlayer': [
+      {label: 'Enable status-stats', command: 'status-stats:toggle'}
+  ]
 
 'menu': [
   {
