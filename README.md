@@ -1,5 +1,5 @@
-# status-stats package
+# status-stats-jbrains package
 
-Status-stats is a derivative of [@segphault](https://github.com/segphault)'s status-wordcount Atom package. This package displays, the Flesh Kincaid Reading Ease score of the document you are working on, and the reading "grade" level of the document, along with the word count. Hit ctrl+shift+t to toggle the info.
+Status-stats-jbrains is a derivative of [@cjoh](https://github.com/cjoh)'s status-stats Atom package. This package displays the Flesch-Kincaid Reading Ease and Grade Level scores of the document you are working on along with the word count. Hit Cmd+Shift+T to toggle the info.
 
-!["status-stats screenshot"](http://cl.ly/image/0C2m3B3h1y1i/README_md_-__Users_cjoh__atom_packages_status-stats-2.png)
+!["status-stats-jbrains screenshot"](http://imgur.com/UTTfRsJ.png)
