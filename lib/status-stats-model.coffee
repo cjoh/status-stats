@@ -15,10 +15,14 @@ class DocumentStatsModel
       wordCount: @countWords(text)
       gradeLevel: @gradeLevel(text)
       readingEase: @readingEase(text)
+      readingTime: @readingTime(text)
     }
 
   countWords: (text) ->
     new Words(text).count
+
+  readingTime: (text) ->
+    new Words(text).count / 200
 
   gradeLevel: (text) ->
     rescueFunction(
@@ -29,4 +33,3 @@ class DocumentStatsModel
     rescueFunction(
       () -> new TextStatistics(text).fleschKincaidReadingEase(),
       0.0)
-
