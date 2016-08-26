@@ -39,6 +39,6 @@ class DocumentStatsView extends View
     if editor?
       activeDocumentText = editor.getText()
       analysis = @model.analyseText(activeDocumentText)
-      @text("#{analysis.wordCount} words; grade level #{analysis.gradeLevel}; reading ease #{analysis.readingEase}")
+      @text("#{analysis.wordCount} words; grade level #{analysis.gradeLevel}; reading ease #{analysis.readingEase}; reading time #{analysis.readingTime} minutes")
     else
       @text("No text to analyse.")
